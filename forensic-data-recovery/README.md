@@ -1,4 +1,5 @@
 # Recovering deleted data
+   ![image](https://github.com/IntiToalombo/CS50/assets/95141129/6210b74a-46be-414a-9c04-9f1b0a34a441)
 ## Functionality 
 Digital cameras tend to store data contiguously on memory cards,  it means that each photo is stored inmediately after the previously taken photo. Hence, the start of a JPEG file's header demarks the end of another. These cameras only write to those cards in "blocks" of 512 Bytes as a result a wasted spaces which is called "slack space" remains on card. Forenseic investigators then often look at space for remmants of suspicious data.
 ## Description 
