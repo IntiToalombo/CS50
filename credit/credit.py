@@ -26,24 +26,15 @@ def validation(cardNumber):
         else:
             total += int(digit)
     # returns the last digit of total
-    return total % 10 == 0 
+    return total % 10
 def identify_card_type(cardNumber):
     card_types = {
-    "MasterCard": {
-            "digits":[16],
-            "StartWith":[51, 52, 53, 54, 55]
-            },
-    "Amex" : {
-        "digits":[15],
-        "StartWith":[34, 37]
-    },
-    "Visa" : {
-        "digits":[13, 16],
-        "StartWith":[4]
-    }
+        "MasterCard": {"digits":[16], "StartWith":[51, 52, 53, 54, 55]},
+        "Amex": {"digits":[15], "StartWith":[34, 37]},
+        "Visa": {"digits":[13, 16],"StartWith":[4]}
     }
     for card_type, properties in card_types.items():
-        if validation(cardNumber) and len(cardNumber) in properties["digits"] and int(cardNumber[:len(str(properties["starWith"][0]))]) in properties["startWith"]: 
+        if validation(cardNumber) and len(cardNumber) in properties["digits"] and int(cardNumber[:len(str(properties["StartWith"][0]))]) in properties["StartWith"]: 
             return card_type
     return "INVALID"
 def main():
