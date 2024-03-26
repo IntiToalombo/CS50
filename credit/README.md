@@ -13,7 +13,7 @@ python credit.py
 Enter credit credit card number: 4111111111111111
 Visa
 ```
-[Here](https://developer.paypal.com/api/nvp-soap/payflow/integration-guide/test-transactions/#standard-test-cards) you can find examples of genuine card numbers to test this script
+[Here](https://developer.paypal.com/api/nvp-soap/payflow/integration-guide/test-transactions/#standard-test-cards) you can find more examples of genuine card numbers to test this script
 # License
 This project is licensed under the MIT license.
 # Acknowledgments
