@@ -1,7 +1,7 @@
 
 # DNA matchig program
 ## Functionality
-This Python program analyzes a DNA sequence against a database of DNA profiles to identify potential matches. It searches for Short Tandem Repeats (STRs) in the DNA sequence and compares them to the STRs found in the database.
+This Python program analyzes a DNA sequence against a database of DNA profiles to identify potential matches. It searches for Short Tandem Repeats (STRs) in the DNA sequence and compares them to the STRs found in the database. For instance [CODIS](https://www.fbi.gov/how-we-can-help-you/dna-fingerprint-act-of-2005-expungement-policy/codis-and-ndis-fact-sheet), the FBI’s DNA database, uses 20 different STRs as part of its DNA profiling process
 ## Features
 * Reads DNA data from a CSV file containing profiles with names and STR values.
 * Reads DNA sequence data from a text file.
