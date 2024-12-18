@@ -1,0 +1,6 @@
+Calculating the average of energy, danceability and valence might be a good aproach to calculate a person's audio aura
+in my opinion is not enough. Since, There are many external factors that might cause an efect in the music listener for example
+when a person is fall in love might be very happy but in the person's job things are not going well it, the mood of a person can change
+fastly.
+Also, we have to be aware that everyone tends to listen the same song or the same kind of genre since advices are everywhere, on internet,
+TV, cines, etc. It encourage all of us to listen the same things so in clonclision we are a kind of Homogenous listners.

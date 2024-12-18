@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Cash
+{% endblock %}
+
+{% block main %}
+    <h1> Add Cash</h1>
+    <form action="/add_cash" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="new_cash" placeholder="Add Cash" type="number" min="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="cc_number">Credit Card Number:</label>
+            <input class="form-control mx-auto w-auto" id="cc_number" name="cc_number" placeholder="Enter your credit card number" type="text" required>
+        </div>
+        <div class="mb-3">
+            <label for="card_holder_name">Card Holder:</label>
+            <input class="form-control mx-auto w-auto" type="text" id="card_holder_name" name="card_holder_name" placeholder="Card Holder Name" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Add Cash</button>
+    </form>
+{% endblock %}

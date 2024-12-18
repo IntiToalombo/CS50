@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Prices</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% set ns = namespace(total = 0) %}
+        {% for row in database %}
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["Shares"] }}</td>
+                <td>{{ row["price"] | usd}}</td>
+                <td>{{ (row["Shares"] * row["price"]) | usd }}</td>
+             </tr>
+             {% set ns.total = ns.total + (row["Shares"] * row["price"]) %}
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th scope = "1">Cash</th>
+            <th>{{ cash | usd }} $</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th scope = "row">TOTAL</th>
+            <th>{{ (ns.total + cash) | usd }} </th>
+        </tr>
+    </tfoot>
+  </table>
+{% endblock %}

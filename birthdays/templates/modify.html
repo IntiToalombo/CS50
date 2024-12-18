@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Modify Birthday</title>
+</head>
+<body>
+    <a href="/" class="back-arrow">
+        ← Back
+    </a>
+
+    <div class="header">
+        <h1>Modify Birthday</h1>
+    </div>
+
+    <div class="container">
+        <!-- Back to index link -->
+        <form action="/modify/{{ birthday.id }}" method="post">
+            <!--Name field with error message-->
+            <input name="name" type="text" id="name" value="{{ request.form.name }}" placeholder="Name">
+            {% if errors.name %}
+                <span class="error">⚠️{{ errors.name }}</span>
+            {% endif %}
+
+            <!--Month field with error message-->
+            <input name="month" type="number" id="month" value="{{ request.form.month }}" placeholder="Month" min="1" max="12">
+            {% if errors.date %}
+                <span class="error">⚠️{{ errors.date }}</span>
+            {% endif %}
+
+            <!--Day field with error message-->
+            <input name="day" type="number" id="day" value="{{ request.form.day }}" placeholder="Day" min="1" max="31">
+            {% if errors.date %}
+                <span class="error">⚠️{{ errors.date }}</span>
+            {% endif %}
+
+            <input type="submit" value="Update Birthday">
+        </form>
+    </div>
+</body>
+</html>
